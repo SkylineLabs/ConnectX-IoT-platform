@@ -172,29 +172,30 @@ cd emq-relx/_rel/emqttd
 <b>Start Kafka Server</b><br>
 cd kafka_2.11-0.11.0.0/<br>
 1) Start the zookeeper either in the background or in a new terminal<br>
-	Background:
+Background
 	
-	```
-	nohup bin/zookeeper-server-start.sh config/zookeeper.properties &
-	```
+```
+nohup bin/zookeeper-server-start.sh config/zookeeper.properties &
+```
 	
-	New Terminal
+New Terminal
 	
-	```
-	bin/zookeeper-server-start.sh config/zookeeper.properties
-	```
+```
+bin/zookeeper-server-start.sh config/zookeeper.properties
+```
 
 2) Start the kafka server either in the background or in a new terminal<br>
-	Background:
-	```
-	nohup bin/kafka-server-start.sh config/server.properties &
-	```
+Background:
+
+```
+nohup bin/kafka-server-start.sh config/server.properties &
+```
 	
-	New Terminal
+New Terminal
 	
-	```
-	bin/kafka-server-start.sh config/server.properties
-	```
+```
+bin/kafka-server-start.sh config/server.properties
+```
 
 <b>To test whether the messages coming from MQTT are reaching kafka:</b><br>
 1) Use eclipse paho(or any other MQTT client) for connecting to your emqttd broker. <br>
@@ -204,26 +205,26 @@ cd kafka_2.11-0.11.0.0/<br>
 
 2) Start a kafka consumer:
 
-	```
-	bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic kafka
-	```
+```
+bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic kafka
+```
 
 Set --topic as "kafka". Note that this should be same as that set in the emqttd_kafka_bridge.config file.<br>
 
 3) First check if kafka has started without issues by producing messages locally<br>
 Start a producer in a different terminal from the consumer and produce to topic "kafka":
 
-	```
-	bin/kafka-console-producer.sh --broker-list localhost:9092 --topic kafka
-	```
+```
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic kafka
+```
 send a message from producer and see if received by consumer. If it is, kafka is working properly<br>
 	
 4) Send a message on a random topic from eclipse Paho which was connected in the first step.<br>
 The folling should be received by the kafka consumer :
 
-	```
-	{"topic":"yourtopic", "message":[yourmessage]}
-	```
+```
+{"topic":"yourtopic", "message":[yourmessage]}
+```
 This is the format in which kafka will receive the MQTT messages<br>
 
 <h2>Setup MongoDB</h2><br>
@@ -393,6 +394,10 @@ spark-submit --class in.skylinelabs.spark.IoT --master local Iot.jar
 
 <h2>Connect-X IoT platform is ready to go!</h2>
 Instructions to use the IoT platform are present in the project report.
+
+To test the platform, use Eclipse paho or our Client SDKs available at:
+https://github.com/SkylineLabs/connectX-IoT-platform-sdk.git
+
 
 
 License
