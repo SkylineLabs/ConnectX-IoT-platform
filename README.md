@@ -394,3 +394,12 @@ spark-submit --class in.skylinelabs.spark.IoT --master local Iot.jar
 <h2>Connect-X IoT platform is ready to go!</h2>
 Instructions to use the IoT platform are present in the project report.
 
+
+License
+-------
+
+Apache License Version 2.0
+
+
+
+
