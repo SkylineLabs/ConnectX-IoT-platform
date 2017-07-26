@@ -363,6 +363,8 @@ Run the server by executing the following command.<br>
 node www
 ```
 
+<br><b>Change the IP address of MongoDB in the codes as applicable.</b>
+
 <h2>Starting the Spark application</h2><br>
 Download the necessary libraries to compile the Spark application.<br>
 Save the mentioned jar files in the ‘jars’ folder of Apache Spark installation.<br>
@@ -392,7 +394,7 @@ jar -cvf Iot.jar in/skylinelabs/spark/*.class /home/ubuntu/spark/jars/*
 spark-submit --class in.skylinelabs.spark.IoT --master local Iot.jar
 ```
 
-
+<br><b>Change the IP address corresponding to Kafka, MongoDB, MQTT broker as applicable.</b>
 
 <br><br>
 
