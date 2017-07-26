@@ -21,7 +21,7 @@ user: ubuntu<br>
 password: blank<br>
 edit->settings->sftp add the ppk key file<br>
 <br>
-<b>SSH into instance :</b><br>
+<b>SSH into instance </b><br>
 
 
 
