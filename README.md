@@ -8,8 +8,8 @@ Launch new instance, set security group at allow TCP and http connections<br>
 Dowload the pem file<br>
 Use puttygen to convert pem to .ppk<br>
 To SSH from putty:<br>
-Host name :<br>
-ubuntu@52.14.4.86 Port 22 SSH<br>
+Host name : Replace (PUBLIC IP) by the publis IP<br>
+ubuntu@(PUBLIC IP) Port 22 SSH<br>
 Connection->SSH->Auth->upload private key file for uthentication (.ppk)<br>
 
 <b>Filezilla:</b><br>
@@ -22,14 +22,19 @@ password: blank<br>
 edit->settings->sftp add the ppk key file<br>
 <br>
 <b>SSH into instance :</b><br>
-```
-sudo apt-get install make
-sudo apt-get install gcc
-```
+
 
 
 
 <h2>Getting server ready</h2>
+
+<b>Install GCC and MAKE</b>
+
+```
+sudo apt-get install make
+sudo apt-get install gcc
+```
+<br>
 <b>Install Erlang:</b>
 
 ```
@@ -151,7 +156,7 @@ vi emqttd_kafka_bridge.config
 [
 	{emqttd_kafka_bridge, [{values, [
 	%%edit this to address and port on which kafka is running
-	{bootstrap_broker, {"172.31.29.115", 9092} },
+	{bootstrap_broker, {"1.1.1.1", 9092} },
 	%% partition strategies can be strict_round_robin or random
 	{partition_strategy, strict_round_robin},
 	%% Change the topic to produce to kafka. Default topic is "Kafka". It is on this topic that the messages will be sent from the broker to a kafka consumer
