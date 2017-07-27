@@ -1,5 +1,5 @@
 <h1>ConnectX IoT platform</h1>
-This is a beta release. Our team is working on improving the tutorial, adding additional modules to ConnectX. Write to us at skylinelabs.tskylinelabs.tech@gmail.com for queries and support.
+This is a beta release. Our team is working on improving the tutorial, adding additional modules to ConnectX. Write to us at skylinelabs.tech@gmail.com for queries and support.
 
 <h2>Server setup</h2><br>
 
